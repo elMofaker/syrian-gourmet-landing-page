@@ -1,0 +1,1470 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    overflow-x: hidden;
+    --scrollbarBG: #f8f7e3;
+    --thumbBG: #173f36;
+  }
+  body::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 46px;
+    border: 3px solid var(--scrollbarBG);
+  }
+  /* navBar */
+  
+  #navbar {
+    padding: 24px 0;
+    background: none !important;
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+  }
+  
+  #hidden_btn_nav {
+    display: none;
+  }
+  
+  @media (min-width: 992px) {
+    #main_container {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+    #nav_brand {
+      position: absolute;
+      left: 5%;
+    }
+    #nav_item {
+      position: absolute;
+      right: 5%;
+    }
+  }
+  @media (max-width: 991px) {
+    #navbar {
+      padding: 0 !important;
+    }
+    #nav_toggler {
+      border: none !important;
+      border-radius: 8px;
+      background: #173f36;
+      display: flex;
+      padding: 12px 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    #nav_item * {
+      margin-left: 0 !important;
+    }
+    #nav_item {
+      text-align: center;
+    }
+  
+    #hidden_btn_nav {
+      display: flex;
+      padding: 18px 24px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 30px;
+      background: #f8f7e3;
+      color: #173f36;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  #Home_rout a,
+  #Career_rout a,
+  #Contact_rout a,
+  #About_rout a,
+  #Recipes_rout a,
+  #Product_rout a {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    margin-top: 16px;
+  }
+  
+  @media (max-width: 1199px) and (min-width: 992px) {
+    #Home_rout a,
+    #Career_rout a,
+    #Contact_rout a,
+    #About_rout a,
+    #Recipes_rout a,
+    #Product_rout a {
+      font-size: 13px;
+    }
+  }
+  
+  /* Home Page */
+  #HomePageBack_img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcc8d4;
+  }
+  #HomePageBack_img {
+    position: absolute;
+    width: 100%;
+    height: 732px;
+    z-index: -1;
+  }
+  
+  .custom-shape-divider-bottom-1693019666 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1693019666 svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 252px;
+    border: none;
+  }
+  
+  .custom-shape-divider-bottom-1693019666 .shape-fill {
+    fill: #ffffff;
+  }
+  @media (max-width: 510px) {
+    .custom-shape-divider-bottom-1693019666 svg {
+      height: 92px;
+    }
+  }
+  
+  #first_home_half {
+    text-align: center;
+  }
+  #first_home_half h1 {
+    color: var(--green, #173f36);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70.5px;
+  }
+  #first_home_half p {
+    color: #173f36;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  #first_home_half button {
+    padding: 12px 24px;
+    border-radius: 32px;
+    background: #183b31;
+    color: #fff;
+    border: none;
+  }
+  
+  #second_home_half img {
+    width: 100%;
+  }
+  
+  @media (max-width: 992px) {
+    #first_home_half h1 {
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 541px) {
+    #second_home_half img {
+      margin-top: 60px;
+    }
+    #first_home_half h1 {
+      font-size: 28px;
+    }
+    #first_home_half p {
+      font-size: 11px;
+      line-height: 18px;
+    }
+  }
+  
+  /* <!-- second sec --> */
+  
+  #product_home_tit {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  #container_product_card .card {
+    border-radius: 23px;
+    background: #f8f7e3;
+    display: flex;
+    padding: 16px 16px 0;
+    align-items: center;
+    width: 22%;
+    border: none;
+    text-decoration: none;
+    height: 300px;
+  }
+  #container_product_card .card:hover {
+    transform: scale(1.06);
+    transition: all 2s;
+    cursor: pointer;
+  }
+  #container_product_card .card p {
+    text-align: center;
+    margin: auto;
+    color: #173f36;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .card-body {
+    display: flex;
+    align-items: end;
+  }
+  #container_product_card .card img {
+    height: 72% !important;
+    width: 100%;
+  }
+  #View_all_product1 {
+    border-radius: 32px;
+    background: #183b31;
+    border: none;
+    display: flex;
+    width: 164px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 60px;
+  }
+  #herb_img {
+    position: absolute;
+    z-index: -1;
+  }
+  @media (max-width: 1299px) and (min-width: 768px) {
+    #product_home11 {
+      margin-top: 100px !important;
+    }
+    #container_product_card .card img {
+      height: 65% !important;
+    }
+    #container_product_card .card p {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 1399px) {
+    #container_product_card .card {
+      width: 20%;
+    }
+  }
+  @media (max-width: 992px) {
+    #container_product_card .card {
+      width: 46%;
+    }
+  }
+  @media (max-width: 420px) {
+    #product_home_tit {
+      margin-top: 100px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    #container_product_card .card {
+      width: 90%;
+    }
+    #product_home11 {
+      margin-top: -60px !important;
+    }
+    #View_all_product1 {
+      margin: auto;
+      margin-top: 40px;
+    }
+    #herb_img {
+      display: none;
+    }
+  }
+  
+  /* <!-- third sec --> */
+  #container_recipes_card .card {
+    border-radius: 23px;
+    background: #f8f7e3;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    padding: 0 !important;
+    height: 310px !important;
+  }
+  #container_recipes_card .card img {
+    width: 100% !important;
+    height: 70% !important;
+  }
+  #container_recipes_card .card:hover {
+    transform: scale(1.06);
+    transition: all 2s;
+    cursor: pointer;
+  }
+  #container_recipes_card .card h3 {
+    color: #173f36;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  #container_recipes_card .card p {
+    text-align: center;
+    margin: auto;
+    color: #173f36;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  @media (max-width: 992px) {
+    #container_recipes_card .card {
+      width: 28%;
+    }
+    #container_recipes_card .card h3 {
+      font-size: 20px;
+    }
+    #container_recipes_card .card p {
+      font-size: 12px;
+    }
+    #container_recipes_card .card-body {
+      align-items: center;
+      padding: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    #container_recipes_card .card {
+      width: 90%;
+    }
+    #container_recipes_card .card-body {
+      align-items: center;
+      padding: 0;
+    }
+  }
+  
+  /* <!-- fourth sec --> */
+  #fourth_Container h1 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 60px;
+  }
+  
+  #fourth_Container div img {
+    width: 100%;
+  }
+  
+  #herb_img22 {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
+  @media (max-width: 767px) {
+    #fourth_Container h1 {
+      font-size: 35px;
+    }
+  }
+  @media (max-width: 500px) {
+    #fourth_Container h1 {
+      font-size: 25px;
+      text-align: center;
+    }
+    #herb_img22 {
+      display: none;
+    }
+  }
+  
+  /* <!-- footer --> */
+  #footer_container {
+    background: #173f36;
+    padding: 50px 0px;
+  }
+  #footer_container ul {
+    list-style: none;
+    text-decoration: none;
+  }
+  #footer_container ul a {
+    color: #fff;
+    text-decoration: none;
+    color: #ddd;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  #footer_container ul h6 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  #footer_container ul p {
+    color: #efefef;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  #last_btn_emial_footer {
+    border-radius: 23px;
+    background: #fff;
+    box-shadow: 0px 284px 80px 0px rgba(0, 0, 0, 0.01);
+    display: flex;
+    height: 43px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: none;
+    color: #292929;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    width: 100%;
+  }
+  
+  #email_inline {
+    border-radius: 6px;
+    background: #ebebeb;
+    display: flex;
+    padding: 11px 15.5px 11px 13px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border: none;
+    margin-top: 7px;
+    width: 100%;
+    position: relative !important;
+  }
+  #email-img_sm {
+    position: absolute;
+    transform: translateX(-190%);
+  }
+  @media (min-width: 992px) {
+    #Quick434 {
+      margin-left: 20px;
+    }
+  }
+  
+  /* product page */
+  #product_tit_page2 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+  #DOWNNLOAD_CATALOGUE {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    padding: 20px 42px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+    background: #183b31;
+    border: none;
+    margin: auto;
+    margin-top: 100px;
+  }
+  #herb_img_pro {
+    position: absolute;
+    z-index: -1;
+    transform: translateY(100%);
+  }
+  #herb_img22_pro {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    transform: translateY(-150%);
+  }
+  
+  #container_product_card22 .card {
+    border-radius: 23px;
+    background: #f8f7e3;
+    display: flex;
+    padding: 16px 16px 0;
+    align-items: center;
+    width: 22%;
+    border: none;
+    text-decoration: none;
+    height: 300px;
+  }
+  #container_product_card22 .card:hover {
+    transform: scale(1.06);
+    transition: all 2s;
+    cursor: pointer;
+  }
+  #container_product_card22 .card p {
+    text-align: center;
+    margin: auto;
+    color: #173f36;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .card-body {
+    display: flex;
+    align-items: end;
+  }
+  #container_product_card22 .card img {
+    height: 72% !important;
+    width: 100%;
+  }
+  
+  @media (max-width: 1399px) {
+    #container_product_card22 .card {
+      width: 20%;
+    }
+    #container_product_card22 .card p {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 992px) {
+    #container_product_card22 .card {
+      width: 25%;
+    }
+    #container_product_card22 .card p {
+      font-size: 13px;
+    }
+    #container_product_card22 .card img {
+      height: 64% !important;
+    }
+  }
+  @media (max-width: 767px) {
+    #product_tit_page2 {
+      font-size: 40px;
+    }
+    #container_product_card22 .card {
+      height: 190px;
+      width: 45%;
+    }
+    #container_product_card22 .card-img,
+    .card-img-top {
+      height: 64% !important;
+    }
+    #container_product_card22 .card-body {
+      padding: 4px !important;
+    }
+  }
+  @media (max-width: 480px) {
+    #container_product_card22 .card {
+      height: 160px;
+      width: 42% !important;
+    }
+    #container_product_card22 .card img {
+      height: 63% !important;
+    }
+    #product_tit_page2 {
+      font-size: 28px;
+    }
+    #container_product_card22 {
+      padding: 0 10px;
+    }
+    #container_product_card22 .card-body {
+      padding: 4px !important;
+    }
+    #container_product_card22 .card p {
+      font-size: 10px;
+    }
+  }
+  
+  /* Product Detail */
+  #product_detailes_sec h1 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #product_detailes_sec p {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  #product_detailes_sec h5 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  #product_detailes_sec div img {
+    padding: 30px 50px;
+    border-radius: 19px;
+    background: #f8f7e3;
+    width: 100%;
+    height: 650px;
+    object-fit: contain;
+  }
+  #pro_back_btn {
+    display: flex !important;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  #pro_back_btn p {
+    color: #173f36;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  #herb_img_pro_det {
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+  @media (max-width: 992px) {
+    #product_detailes_sec h1 {
+      font-size: 40px;
+    }
+    #product_detailes_sec p {
+      font-size: 15px;
+    }
+    #product_detailes_sec h5 {
+      font-size: 25px;
+    }
+  }
+  @media (max-width: 767px) {
+    #product_detailes_sec div img {
+      margin-top: 90px;
+    }
+    #product_detailes_sec div img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  #gramsbuttons1,
+  #gramsbuttons2 {
+    background: #173f36;
+    color: #ddd;
+    padding: 10px;
+    border: none;
+    border-radius: 14px;
+  }
+  #darkenColor444{
+    background:#f8f7e3;
+    border-radius: 20px;
+    padding: 20px;
+    width: 380px;
+    margin-top: 25px;
+  }
+  @media (max-width:992px) {
+    #darkenColor444{
+      width: 100%;
+    }
+  }
+  /* Recipes page */
+  #Recipes_tit_page {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+  
+  @media (max-width: 992px) {
+    .HIDDEN_CARD_MD {
+      display: none !important;
+    }
+    #Recipes_tit_page {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    #herb_img_pro,
+    #herb_img22_pro {
+      display: none;
+    }
+  }
+  /* Recipe detail page */
+  #fsdt4235gd435 li {
+    position: relative;
+    margin-top: 30px;
+    list-style-type: none;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      display: block;
+      background: rgba(255, 0, 0, 0);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: #173f36;
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      padding-left: 7px;
+    }
+    &:nth-child(1):before {
+      content: "1";
+    }
+    &:nth-child(2):before {
+      content: "2";
+    }
+    &:nth-child(3):before {
+      content: "3";
+    }
+    &:nth-child(4):before {
+      content: "4";
+    }
+    &:nth-child(5):before {
+      content: "5";
+    }
+    &:nth-child(6):before {
+      content: "6";
+    }
+    &:nth-child(7):before {
+      content: "7";
+    }
+    &:nth-child(8):before {
+      content: "8";
+    }
+    &:nth-child(9):before {
+      content: "9";
+    }
+    &:nth-child(10):before {
+      content: "10";
+    }
+    &:nth-child(11):before {
+      content: "11";
+    }
+    &:nth-child(12):before {
+      content: "12";
+    }
+    &:nth-child(13):before {
+      content: "13";
+    }
+    &:nth-child(14):before {
+      content: "14";
+    }
+    &:nth-child(15):before {
+      content: "15";
+    }
+    &:nth-child(16):before {
+      content: "16";
+    }
+    &:nth-child(17):before {
+      content: "17";
+    }
+    &:nth-child(18):before {
+      content: "18";
+    }
+    &:nth-child(19):before {
+      content: "19";
+    }
+    &:nth-child(20):before {
+      content: "20";
+    }
+    &:nth-child(21):before {
+      content: "21";
+    }
+    &:nth-child(22):before {
+      content: "22";
+    }
+    &:nth-child(23):before {
+      content: "23";
+    }
+    &:nth-child(24):before {
+      content: "24";
+    }
+    &:nth-child(25):before {
+      content: "25";
+    }
+    &:nth-child(26):before {
+      content: "26";
+    }
+    &:nth-child(27):before {
+      content: "27";
+    }
+  }
+  
+  #fwert245fr {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #fwert245fr li {
+    display: flex;
+    padding-left: 16px;
+  }
+  
+  #fwert245fr li::before {
+    content: url("");
+    background: #173f36;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-right: 17px;
+    margin-top: 17px;
+  }
+  .hrHeight {
+    margin-left: 20px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.9;
+    background: #173f36a1;
+  }
+  
+  #honey_tit {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  #herb_img22_recipe {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    transform: translateY(-150%);
+  }
+  #recipe_img_container {
+    position: relative;
+  }
+  #recipe_img_container img {
+    width: 100%;
+    height: 480px;
+  }
+  #recipe_content454 {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    color: #f8f7e3;
+    text-align: center;
+    display: flex;
+    width: 50%;
+    padding: 20px 46px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 24px 24px 0px;
+    background: rgba(23, 63, 54, 0.6);
+  }
+  
+  #container_for_recipe_detail h1 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+  #container_for_recipe_detail p {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+  }
+  
+  @media (max-width: 1120px) {
+    #honey_tit {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 992px) {
+    #recipe_content454 h1 {
+      font-size: 29px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    #rec_page_container #herb_img {
+      display: none;
+    }
+    #herb_img22_recipe {
+      display: none !important;
+    }
+    #recipe_content454 {
+      bottom: 50px;
+      width: 80%;
+      padding: 20px 6px;
+    }
+    #recipe_content454 h1 {
+      font-size: 20px !important;
+    }
+    #honey_tit {
+      font-size: 32px;
+    }
+    #recipe_img_container img {
+      width: 100%;
+      height: 350px;
+    }
+    #container_for_recipe_detail h1 {
+      font-size: 28px;
+    }
+    #container_for_recipe_detail p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    #fwert245fr li::before {
+      margin-right: 17px;
+      margin-top: 6px;
+    }
+    #honey_tit {
+      font-size: 25px;
+      padding: 30px;
+    }
+    #container_for_recipe_detail h1 {
+      font-size: 25px;
+    }
+    #container_for_recipe_detail p {
+      font-size: 15px;
+      line-height: normal;
+    }
+  }
+  
+  /* About Page */
+  #tit_about h1 {
+    color: #173f36;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  
+  #tit_about p {
+    margin-top: 40px;
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #two_cards_about .dsd3223 {
+    border-radius: 27px;
+    background: #f8f7e3;
+    padding: 64px 16px;
+    width: 49.6%;
+  }
+  #two_cards_about h3 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
+  #two_cards_about p {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #behind_tit {
+    color: #173f36;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  #in_img_text,
+  #in_img_text2 {
+    position: relative;
+  }
+  .img_but img {
+    width: 70% !important;
+  }
+  .img_but2 img {
+    width: 70% !important;
+    float: right;
+  }
+  
+  #top_text_in_img {
+    position: absolute;
+    bottom: -10%;
+    right: 0%;
+    border-radius: 47px;
+    background: var(--green, #173f36);
+    width: 80% !important;
+    height: 374px;
+    padding: 40px 32px;
+    width: 100%;
+  }
+  
+  #top_text_in_img2 {
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+    border-radius: 47px;
+    background: var(--green, #173f36);
+    width: 80% !important;
+    height: 374px;
+    padding: 40px 32px;
+    width: 100%;
+  }
+  #top_text_in_img h1,
+  #top_text_in_img2 h1 {
+    color: #f8f7e3;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #top_text_in_img p,
+  #top_text_in_img2 p {
+    margin-top: 40px;
+    color: #f8f7e3;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  @media (max-width: 1199px) {
+    #two_cards_about .dsd3223 {
+      width: 45% !important;
+    }
+    #two_cards_about h3 {
+      font-size: 32px;
+    }
+    #two_cards_about p {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 992px) {
+    #top_text_in_img,
+    #top_text_in_img2 {
+      bottom: -35%;
+      width: 80% !important;
+      height: 80%;
+      padding: 40px 32px;
+    }
+    #top_text_in_img h1,
+    #top_text_in_img2 h1 {
+      font-size: 30px;
+    }
+    #top_text_in_img p,
+    #top_text_in_img2 p {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    #behind_tit {
+      font-size: 35px;
+    }
+    #two_cards_about .dsd3223 {
+      width: 49% !important;
+    }
+    #two_cards_about h3 {
+      font-size: 28px;
+    }
+    #two_cards_about p {
+      font-size: 16px;
+    }
+    #tit_about h1 {
+      font-size: 40px;
+    }
+  
+    #tit_about p {
+      font-size: 25px;
+    }
+    #top_text_in_img {
+      position: relative;
+      transform: translateY(-10%);
+      width: 98% !important;
+      height: 100%;
+      padding: 40px 32px;
+      margin: auto;
+    }
+    #top_text_in_img2 {
+      position: relative;
+      transform: translateY(-10%);
+      width: 98% !important;
+      height: 100%;
+      padding: 40px 32px;
+      margin: auto;
+    }
+    #top_text_in_img h1,
+    #top_text_in_img2 h1 {
+      font-size: 24px;
+    }
+    #top_text_in_img p,
+    #top_text_in_img2 p {
+      font-size: 12px;
+    }
+    .img_but img,
+    .img_but2 img {
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    #behind_tit {
+      font-size: 28px;
+    }
+    #two_cards_about .dsd3223 {
+      width: 100% !important;
+    }
+    #two_cards_about h3 {
+      font-size: 28px;
+    }
+    #two_cards_about p {
+      font-size: 16px;
+    }
+    #tit_about h1 {
+      font-size: 30px;
+    }
+  
+    #tit_about p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Contact Page */
+  #Contact_tit {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  #container_for_con_form div p {
+    color: var(--green, #173f36);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+  #container_for_con_form div h1 {
+    color: var(--green, #173f36);
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  #container_for_con_form div h6 {
+    color: var(--green, #173f36);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  #Name_Input,
+  #Email_Input {
+    background: #f9f9ff;
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+    width: 100%;
+    height: 50px;
+  }
+  #Mass_Input {
+    background: #f9f9ff;
+    border-radius: 20px;
+    padding: 20px 20px 100px;
+    border: none;
+    width: 100%;
+    height: 50px;
+  }
+  #send_mass_btn32 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 30px;
+    background: #173f36;
+    padding: 18px 24px;
+  }
+  #contact_img313 {
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    #contact_img313 {
+      margin-bottom: 30px;
+    }
+    #container_for_con_form div p {
+      font-size: 15px;
+    }
+    #container_for_con_form div h1 {
+      font-size: 28px;
+    }
+    #container_for_con_form div h6 {
+      font-size: 15px;
+    }
+    #Contact_tit {
+      font-size: 40px;
+    }
+  }
+  
+  /* Careers Page */
+  #Careers_tit {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  #Careers_tex33 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  #career_card99 {
+    padding: 100px;
+    border-radius: 52px;
+    width: 49% !important;
+    background: linear-gradient(0deg, #f8f7e3 0%, #f8f7e3 100%),
+      url(<path-to-image>), lightgray 50% / cover no-repeat;
+  }
+  #career_card99 p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  #career_card99 h1 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 50px 0;
+  }
+  #apply_btn434 {
+    display: flex;
+    padding: 24px 36px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 40px;
+    border: 2px solid #173f36;
+    width: 200px;
+    height: 50px;
+    background: none;
+    color: #173f36;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  #apply_btn434:hover {
+    background: #173f36;
+    color: #ddd;
+    transition: all 1s;
+  }
+  @media (max-width: 1399px) {
+    #career_card99 {
+      width: 48.5% !important;
+      margin: auto;
+    }
+  }
+  @media (max-width: 992px) {
+    #career_card99 {
+      width: 47.5% !important;
+      padding: 50px 26px !important;
+    }
+    #career_card99 h1 {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    #career_card99 {
+      width: 100% !important;
+    }
+    #Careers_tit {
+      font-size: 40px;
+    }
+    #Careers_tex33 {
+      font-size: 28px;
+    }
+    #career_card99 h1 {
+      font-size: 30px;
+    }
+  }
+  
+  /* apply */
+  #Apply_tex33 {
+    color: #173f36;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  #form_submiting34 {
+    width: 100%;
+    border-radius: 10px;
+    background: var(--d-9-d-9-d-9, #f8f7e3);
+    box-shadow: 0px 6px 6px 0px rgba(184, 186, 75, 0.25);
+    padding: 100px;
+  }
+  #form_submiting34 form {
+    width: 80%;
+    margin: auto;
+  }
+  #form_submiting34 input {
+    width: 100%;
+    height: 50px;
+    flex-shrink: 0;
+    fill: #f9f9ff;
+    border: none;
+    border-radius: 30px;
+  }
+  #form_submiting34 label {
+    color: var(--green, #173f36);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    transform: translate(0%, -30%);
+  }
+  .input_container label {
+    background: #173f36;
+    color: #fff !important;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transform: translateY(66%) !important;
+  }
+  
+  .input_container label:hover {
+    background-color: #eee;
+    color: #173f36 !important;
+  }
+  #gsdfg3663 {
+    width: 70% !important;
+    height: 89px !important;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  @media (max-width: 800px) {
+    #gsdfg3663 {
+      width: 100% !important;
+    }
+    #form_submiting34 {
+      padding: 40px 10px;
+    }
+  }
+  /* GSAP */
+  
+  .hidddenright {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-15%);
+    transition: all 1s;
+  }
+  
+  .hidddenleft {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(15%);
+    transition: all 1s;
+  }
+  
+  .hiddden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+  }
+  
+  .showw {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+  }
+  
